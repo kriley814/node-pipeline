@@ -1,5 +1,5 @@
-//const AWS = require('aws-sdk');
-//const fs = require('fs');
+const AWS = require('aws-sdk');
+const fs = require('fs');
 
 var myArgs = process.argv.slice(2);
 console.log('myArgs[0]: ', myArgs[0]);
@@ -16,7 +16,7 @@ console.log('Bucket name: ', bucketName);
 const key = json_new_obj.Records[0].s3.object.key
 console.log('Key: ', key);
 
-/** const filePath = '/user/juser/downloaded.json';
+const filePath = './downloaded.json';
 var s3 = new AWS.S3();
 
 const downloadFile = (filePath, bucketName, key) => {
@@ -31,4 +31,4 @@ const downloadFile = (filePath, bucketName, key) => {
   });
 };
 
-downloadFile(filePath, bucketName, key); **/
+downloadFile(filePath, bucketName, key); 
