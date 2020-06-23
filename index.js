@@ -43,8 +43,8 @@ fs.readFile('./downloaded.json', 'utf8', (err, jsonString) => {
         console.log("Order ID is: ", trainingInfra.Name) 
         console.log("First name is: ", trainingInfra.First_Name__c)
         console.log("Last name is: ", trainingInfra.Last_Name__c)
-        console.log("Order date is: ", Order_Date__c)
-        conosle.log("Course title is: ", Course_Title__c)
+        console.log("Order date is: ", trainingInfra.Order_Date__c)
+        conosle.log("Course title is: ", trainingInfra.Course_Title__c)
 } catch(err) {
         console.log('Error parsing JSON string:', err)
     }
