@@ -32,3 +32,11 @@ const downloadFile = (filePath, bucketName, key) => {
 };
 
 downloadFile(filePath, bucketName, key); 
+
+fs.readFile('./downloaded.json', 'utf8', (err, jsonString) => {
+    if (err) {
+        console.log("File read failed:", err)
+        return
+    }
+    console.log('File data:', jsonString) 
+})
