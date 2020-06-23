@@ -33,10 +33,17 @@ const downloadFile = (filePath, bucketName, key) => {
 
 downloadFile(filePath, bucketName, key); 
 
+const fs = require('fs')
 fs.readFile('./downloaded.json', 'utf8', (err, jsonString) => {
     if (err) {
-        console.log("File read failed:", err)
+        console.log("Error reading file from disk:", err)
         return
     }
-    console.log('File data:', jsonString) 
+    try {
+        const training-infra = JSON.parse(jsonString)
+        console.log("Order ID address is:", training-infra.Name) 
+} catch(err) {
+        console.log('Error parsing JSON string:', err)
+    }
 })
+
