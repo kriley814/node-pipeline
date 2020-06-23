@@ -33,7 +33,6 @@ const downloadFile = (filePath, bucketName, key) => {
 
 downloadFile(filePath, bucketName, key); 
 
-const fs = require('fs')
 fs.readFile('./downloaded.json', 'utf8', (err, jsonString) => {
     if (err) {
         console.log("Error reading file from disk:", err)
