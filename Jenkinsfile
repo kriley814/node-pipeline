@@ -6,7 +6,7 @@ pipeline {
   stages {
     stage('Example') {
       steps {
-        sh 'echo "SQS_BODY: $sqs_body"'
+        sh 'npm config ls'
       }
     }
   }
