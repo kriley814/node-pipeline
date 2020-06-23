@@ -39,7 +39,7 @@ fs.readFile('./downloaded.json', 'utf8', (err, jsonString) => {
         return
     }
     try {
-        const training-infra = JSON.parse(jsonString)
+        var training-infra = JSON.parse(jsonString)
         console.log("Order ID address is:", training-infra.Name) 
 } catch(err) {
         console.log('Error parsing JSON string:', err)
